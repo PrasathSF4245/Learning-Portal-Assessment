@@ -1,0 +1,61 @@
+body
+{
+    height: 90vh;
+    background-color: white;
+    margin-top: 90px;
+    color: darkblue;
+}
+@mixin flexCentre
+{
+ display: inline-block;
+ justify-content: center;
+//  float: left;
+ width: 30%;
+ margin: 10px;
+
+ h3
+ {
+    text-align: center;
+ }
+}
+#Intro
+{
+   
+    padding: 10px 60px;
+    h1
+    {
+        text-align: center;
+    }
+    justify-content: center;
+}
+#box1
+{
+    
+    @include flexCentre();
+}
+#box2
+{
+   
+    @include flexCentre();
+}
+#box3
+{
+    @include flexCentre();
+   
+}
+#box4
+{
+    @include flexCentre();
+   
+}
+#box5
+{
+    @include flexCentre();
+   
+}
+#box6
+{
+  
+    @include flexCentre();
+  
+}

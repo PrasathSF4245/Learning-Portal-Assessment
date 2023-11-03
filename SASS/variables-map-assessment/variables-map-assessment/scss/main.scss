@@ -1,0 +1,67 @@
+
+    $box-border-color:red;
+    $box-background-color:white;
+    $accent-color:green;
+    $text-color:darkgrey;
+    $box-padding:10px;
+
+
+body
+{
+  background-color: black;
+    width:100%;
+}
+* {
+    box-sizing: border-box;
+  }
+  img
+  {
+    margin: 20px 100px;
+    width: 200px;
+    height: 200px;
+  }
+  
+#fristbox
+{
+    float: left;
+    width: 32%;
+    padding:$box-padding ;
+    background-color: $box-background-color;
+    border-color: $box-border-color;
+    border-style: solid;
+    height: 80vh;
+    margin: 40px 20px 40px 0px;
+    color: $text-color;
+}
+#secondbox
+{
+    float: left;
+    width: 32%;
+    padding:$box-padding ;
+    height: 300px;
+    background-color: $box-background-color;
+    border-color: $box-border-color;
+    border-style: solid;
+    height: 80vh;
+    margin: 40px 20px 40px 0px;
+    color: $text-color;
+}
+#thridbox
+{
+    float: left;
+    width: 32%;
+    padding:$box-padding ;
+    background-color: $box-background-color;
+    border-color: $box-border-color;
+    border-style: solid;
+    height: 80vh;
+    margin: 40px 20px 40px 0px;
+    color: $text-color;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

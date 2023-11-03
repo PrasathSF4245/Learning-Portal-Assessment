@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h3 style="text-align: center;" id="welcome">Welcome to my Content <a href="#" target="_blank">Paltform</a> </h3>
+    <label for="Title" style="margin-right: 20px;">Enter the Title : </label>
+    <input type="text" name="Title" id="Title"style="border: 2px solid brown;"><br><br>
+    <label for="content">Enter the content ; </label>
+    <input type="text" name="content" id="content" style="border: 2px solid brown;"><br><br>
+    <table>
+        <tr>
+        <th>Tile No</th>
+        <th> Title</th>
+        <th> Contetnt</th>
+    </tr>
+    <tr>
+        <td><span id="row1">1.</span></td>
+        <td><span id="title1"></span></td>
+        <td><span id="content1"></span></td>
+       
+    </tr>
+    <tr>
+        <td><span id="row2">2.</span></td>
+        <td><span id="title2"></span></td>
+        <td><span id="content2"></span></td>
+       
+    </tr>
+    <tr>
+        <td><span id="row31">3.</span></td>
+        <td><span id="title3"></span></td>
+        <td><span id="content3"></span></td>
+       
+    </tr>
+    </tr>
+    </table>
+    <br><br>
+    <input type="button" value="for 1st tile" id="button1" > 
+
+    <input type="button" value="for 2nd tile" id="button2" > 
+
+    <input type="button" value="for 3rd tile" id="button3" > 
+    <script src="jquery.js"></script>
+    <script>
+        $("#button1").click(function()
+        {
+            var usertitle=document.getElementById("Title").value;
+         ($("#title1").text(usertitle))
+         var userContent=document.getElementById("content").value;
+         ($("#content1").text(userContent))
+        });
+        $("#button2").click(function()
+        {
+            var usertitle=document.getElementById("Title").value;
+         ($("#title2").text(usertitle))
+         var userContent=document.getElementById("content").value;
+         ($("#content2").text(userContent))
+        });
+        $("#button3").click(function()
+        {
+            var usertitle=document.getElementById("Title").value;
+         ($("#title3").text(usertitle))
+         var userContent=document.getElementById("content").value;
+         ($("#content3").text(userContent))
+        });
+    </script>
+</body>
+</html>

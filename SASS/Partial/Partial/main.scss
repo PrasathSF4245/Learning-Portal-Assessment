@@ -1,0 +1,21 @@
+@import './textcolor';
+@import './textfont';
+body
+{
+   padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+hr
+{
+    margin: auto 10px;
+}
+h3
+{
+    padding: 10px;
+}
+p{
+    padding: 10px;
+}

@@ -1,0 +1,90 @@
+body {
+  background-color: white;
+}
+h3 {
+  color: blue;
+  /* text-align: center; */
+}
+#button1,#button2,#button3{
+  margin: 20px auto auto 150px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid orangered;
+  color: orangered;
+  background-color: white;
+}
+p {
+  color: blue;
+}
+#fristbox {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 90vh;
+  float: left;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+#fristbox img {
+  width: 380px;
+  height: 200px;
+  margin-left: 5px;
+}
+#secondbox {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 90vh;
+  float: left;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+#secondbox img {
+  width: 330px;
+  height: 200px;
+  margin-left: 55px;
+}
+
+#thridbox {
+  /* background-color: white; */
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 90vh;
+  float: left;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+#thridbox img {
+  width: 300px;
+  height: 220px;
+  margin-left: 90px;
+}
+#button3:hover {background-color: darkgray}
+#button2:hover {background-color: darkgray}
+#button1:hover {background-color: darkgray}
+#button3:active {
+  background-color: darkgray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#button1:active {
+  background-color: darkgray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#button2:active {
+  background-color: darkgray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#para1
+{
+  margin-top: 25px;
+}
+.changeColor
+{
+  background-color: gray;
+}

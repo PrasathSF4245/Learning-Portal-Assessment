@@ -1,0 +1,74 @@
+body {
+  height: 90vh;
+  background-color: white;
+  margin-top: 90px;
+  color: darkblue;
+}
+
+#Intro {
+  padding: 10px 60px;
+  justify-content: center;
+}
+#Intro h1 {
+  text-align: center;
+}
+
+#box1 {
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
+#box1 h3 {
+  text-align: center;
+}
+
+#box2 {
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
+#box2 h3 {
+  text-align: center;
+}
+
+#box3 {
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
+#box3 h3 {
+  text-align: center;
+}
+
+#box4 {
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
+#box4 h3 {
+  text-align: center;
+}
+
+#box5 {
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
+#box5 h3 {
+  text-align: center;
+}
+
+#box6 {
+  display: inline-block;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
+#box6 h3 {
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,63 @@
+body {
+  background-color: gainsboro;
+}
+h3 {
+  color: blue;
+  text-align: center;
+}
+#button {
+  margin: 20px auto auto 150px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid orangered;
+  color: orangered;
+  background-color: white;
+}
+p {
+  color: blue;
+}
+#fristbox {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 90vh;
+  float: left;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+#fristbox img {
+  width: 380px;
+  height: 200px;
+  margin-left: 5px;
+}
+#secondbox {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 90vh;
+  float: left;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+#secondbox img {
+  width: 300px;
+  height: 220px;
+  margin-left: 55px;
+}
+#thridbox {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 90vh;
+  float: left;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+#thridbox img {
+  width: 330px;
+  height: 200px;
+  margin-left: 55px;
+}

@@ -1,0 +1,97 @@
+
+    $box-border-color:red;
+    $box-background-color:white;
+    $accent-color:green;
+    $text-color:blue;
+    $box-padding:10px;
+
+
+body
+{
+  background-color: grey;
+    width:100%;
+}
+* {
+    box-sizing: border-box;
+  }
+  img
+  {
+    margin: 20px 100px;
+    width: 200px;
+    height: 200px;
+  }
+  
+#fristbox
+{
+  h3
+  {
+    text-align: center;
+  }
+    float: left;
+    width: 32%;
+    padding:$box-padding ;
+    background-color: $box-background-color;
+    border-color: $box-border-color;
+    border-style: solid;
+    height: 80vh;
+    margin: 40px 20px 40px 0px;
+    color: $text-color;
+    .button
+{
+  background-color: white;
+  border: 2px solid red;
+  color: red;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px 4px 110px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+ 
+}
+#secondbox
+{
+   
+    color:darkblue;
+    h3
+    {
+      font-weight: 700;
+      color: darkblue
+    }
+   @extend #fristbox;
+   .button
+   {
+     background-color: black;
+     border: 2px solid orangered;
+     color: orangered;
+     
+   }
+}
+#thridbox
+{
+   
+    @extend #fristbox;
+    h3
+    {
+      color: darkblue;
+      font-weight: 800;
+    }
+    color: orange;
+    .button
+    {
+      background-color: green;
+      border: 4px solid black ;
+      color:black;
+     
+    }
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

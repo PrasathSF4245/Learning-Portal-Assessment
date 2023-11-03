@@ -1,0 +1,8 @@
+#button1,#button2,#button3
+{padding:5px 10px; border-radius: 6px; color:orangered; border: 2px solid brown; background-color: aliceblue; }
+table,th,tr,td
+{
+    padding: 10px;
+    width: fit-content;
+    border: 2px solid brown;
+}

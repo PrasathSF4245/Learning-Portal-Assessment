@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="row">
+        <div id="fristbox">
+            <img src="images\cloud.png" alt="">
+            <br>
+            <h3 style="margin-right: 70px; margin-top: 35px;text-align: center;">Cloud</h3><br>
+           
+            <p id="para1">Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technologyservices, such as computing power, storage, and databases, on an as-needed basis from a cloud providerlike Amazon Web Services (AWS).</p>
+           
+           <br>
+
+            <input type="button" id="button1" value="Learn more">
+        </div>
+        
+        <div id="secondbox">
+            <img src="images/On-premises.png" alt="">
+            <br>
+            <h3 style=" margin-top: 35px;text-align: center; ">On Permises</h3><br>
+            <p id="para2">On-premise software is installed and runs on a company's own hardware infrastructure, and is hostedlocally, whereas cloud software is stored and managed on the provider's servers, and accessed through  web browser or other interface.as much as it has, as its allure and promise offer newfound flexibility for enterprises, everything from saving time and money to improving agility and scalability</p>
+            <br>
+
+            <input type="button" id="button2" value="Learn more">
+        </div>
+         
+        <div id="thridbox"> <img src="  images\embedded.png" alt="">
+            <br>
+            <h3 style=" margin-top: 35px;text-align: center; ">Embedded</h3><br>
+            <p id="para3">Embedded dashboards provide value to end users by distilling large datasets into actionable
+                information and presenting the information in the context of tools they already use every day. Popular Data
+                Visualizations in Embedded Dashboards.Data can be represented visually in a variety of ways in an
+                embedded dashboard. Below are some of the most common data visualizations
+            </p>
+            <br>
+
+            <input type="button" id="button3" value="Learn more">
+           
+
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#button1").click(function(){
+        $("#secondbox").fadeOut(3000,function()
+        {
+          $("#thridbox").addClass("changeColor")
+        });
+
+        });
+        });
+       
+        $("#button2").click(function(){
+        $("#para2").toggle();
+        $("#para1").toggle();
+        $("#para3").toggle();
+
+        });
+        $("#button3").click(function(){
+        $("#para2").show();
+        $("#para1").show();
+        $("#para3").show();
+
+        });
+    //     $("#button3").click(function(){
+    //     $("#para3").text(function(i, origText){
+    //         var $temp3 = $('#para3').html();
+    //     alert($temp3);   
+          
+    //     });
+    //     });
+    // });
+    </script>
+</body>
+
+</html>
+
+
+<!-- // // $("document").ready(function()
+// // {
+// // $("button1").onclick(alert("#p1"))
+// // })
+// var content = document.getElementById("p1").value;
+// $("document").ready(function()
+//  {
+// $("button1").click(function () {
+//      console.log("hello");
+//     alert(content) });
+// }); -->
+
+<!-- <script src="jquery.js"></script>
+<script>
+   $(document).ready(function(){
+$("#btn1").click(function(){
+$("#para1").text(function(i, origText){
+    var $temp = $('p').html();
+alert($temp);
+    
+  
+});
+});
+
+$("#btn2").click(function(){
+$("#test2").html(function(i, origText){
+  return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")"; 
+});
+});
+}); -->
