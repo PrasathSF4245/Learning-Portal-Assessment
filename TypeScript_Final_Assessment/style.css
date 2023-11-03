@@ -1,0 +1,44 @@
+input
+{
+    border-radius: 8px;
+    padding: 10px;
+    color: red;
+    background-color: black;
+    border: 2px solid red;
+   
+}
+
+#buttons
+{
+   
+   position: absolute;
+   /* margin-left: 39%; */
+   margin-top: 200px;
+
+}
+#body
+{
+    margin-top: 45px;
+    border-radius: 100%;
+    width: 30vh;
+    height: 30vh;
+    margin-left: 43% ;
+    display: flex;
+    border: 2px solid white;
+    
+}
+p
+{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid red;
+}
+h1
+{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
