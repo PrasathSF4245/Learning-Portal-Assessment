@@ -1,0 +1,126 @@
+body {
+    height: 90vh;
+    border-color: black;
+    border-width: 4px 4px 4px 4px;
+    border-style: solid;
+}
+
+#header {
+    margin: 15px 5px 5px 35px;
+    display: flex;
+}
+
+#header img {
+
+    width: 30px;
+    height: 30px;
+}
+
+#header span {
+    font-size: large;
+    font-weight: 900;
+    color: blue;
+    margin: auto auto auto 20px;
+}
+
+#header p {
+    font-size: large;
+    font-weight: 900;
+    margin: auto auto auto 10px;
+}
+
+hr {
+    border-width: 3px 3px 3px 3px;
+    border-style: solid;
+}
+
+#inputFeilds {
+    height: 78%;
+    margin: 10px 20px auto 20px;
+}
+
+#inputFeilds select {
+    margin: auto auto auto;
+}
+
+#bookname {
+    margin: auto auto auto 90px;
+}
+
+#Authorname {
+    margin: auto auto auto 40px;
+}
+
+#Authoremail {
+    margin: auto auto auto 40px;
+}
+
+#dropdown {
+    display: inline;
+    margin: auto auto auto 70px;
+
+}
+
+#Publishyear {
+    margin: auto auto auto 60px;
+}
+
+#price {
+    margin: auto auto auto 90px;
+}
+
+button {
+    margin: 10px 10px auto 10px;
+    padding: 5px 15px;
+    background-color: rgb(103, 97, 97);
+    color: white;
+}
+
+#checkentries {
+    color: rgb(255, 0, 0);
+}
+#invalidPublishyear {
+    color: rgb(255, 0, 0);
+}
+
+#invalidprice {
+    color: rgb(255, 0, 0);
+
+}
+
+#booknameeror {
+    color: rgb(255, 0, 0);
+}
+
+#Authornameerror {
+    color: rgb(255, 0, 0);
+}
+
+#invalidAuthoremail {
+    color: rgb(255, 0, 0);
+}
+#pricedisplay {
+    margin: auto auto auto 150px;
+}
+#dptdisplay {
+    margin: auto auto auto 160px;
+}
+#Publishyeardisplay {
+    margin: auto auto auto 105px;
+}
+#Authoremaildisplay {
+    margin: auto auto auto 100px;
+}
+#Authornamedisplay {
+    margin: auto auto auto 100px;
+}
+#booknamedisplay {
+  
+    margin: auto auto auto 110px;
+}
+#headinngs
+{
+    font-weight: 700;
+    margin: auto auto auto 20px;
+    
+}

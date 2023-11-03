@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="StyleSheet" href="StyleSheet.css">
+    <script src="Externaljs.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <img src="image/synclogoclr.webp" alt="synclogo">
+        <p> Library portal <span>Books</span></p>
+    </div>
+    <hr>
+    <div id="inputFeilds">
+
+        <h1>Add New Book</h1>
+        <form class="formss" id="forms" onsubmit="return aftersubmit()" action="ShowBookDetails.html">
+
+            <label>Category</label>
+            <div id="dropdown">
+                <select id="dpt">
+                    <option value="select" selected>select</option>
+                    <option value="IT dept" >It dept</option>
+                    <option value="CSE dept">CSE dept</option>
+                    <option value="ECE dept">ECE dept</option>
+                    <option value="EEE dept">EEE dept</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <label for="bookname">Book</label>
+            <input type="text" id="bookname" onkeyup="Booknamevalidation()">
+            <span id="booknameeror"></span>
+          
+             <br>
+            <br>
+            <label for="Authorname">Author Name</label>
+
+    <input type="text" id="Authorname" onkeyup="AuthornameValidation()">
+            <span id="Authornameerror"></span>
+          
+
+            <br>
+            <br> 
+            <label for="Authoremail">Author Email</label>
+            <input type="text" id="Authoremail" onkeyup="AuthoremailValidation()">
+            <span id="invalidAuthoremail"></span>
+            
+                       
+            <br>
+            <br>
+            <label for="Publishyear">Published</label>
+            <input type="text" id="Publishyear"onkeyup="PublishyearValidation()">
+            <span id="invalidPublishyear"></span>
+            <br>
+            <br> 
+            <label for="price">Price</label>
+            <input type="text" id="price" onkeyup="PriceValidation()">
+            <span id="invalidprice"></span>
+            <br>
+            <br>
+            <button type="button" onclick="Save()"> Save</button>
+            <button type="reset"> Cancel</button>
+            <button type="submit">Show</button>
+            <br>
+            <br>
+            <span id="checkentries"></span>
+        </form>
+    </div>
+    <footer>
+        <hr>
+        Copyright @2023 - present Syncfusion
+    </footer>
+</body>
+
+</html>
+<!--   <label id="invalidbookname">Invalid Book Name</label>
+            <label id="bookfeildcannotbeanumber">Book Feild cannot be a Number</label>
+            <label id="booknamelength">Book name length should not exceed 50</label> -->

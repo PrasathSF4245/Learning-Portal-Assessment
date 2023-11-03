@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <link rel="StyleSheet" href="StyleSheet.css">
+</head>
+
+<body>
+    <div id="header">
+        <img src="image/synclogoclr.webp" alt="synclogo">
+        <p> Library portal <span>Books</span></p>
+    </div>
+    <hr>
+    <br>
+    <br>
+
+
+    <div><span id="headinngs">C++ Book Details</span></div>
+    <br>
+    <br>
+
+
+    <div> <span id="headinngs">dpt</span><span id="dptdisplay"></span>
+        <script>
+            document.getElementById("dptdisplay").innerHTML = localStorage.getItem("Category");
+        </script>
+
+    </div>
+    <br>
+    <br>
+
+
+    <div> <span id="headinngs">bookname</span><span id="booknamedisplay"></span>
+        <script>
+            document.getElementById("booknamedisplay").innerHTML = localStorage.getItem("Book");
+        </script>
+
+    </div>
+    <br>
+    <br>
+
+    <div> <span id="headinngs">Authoremail</span><span id="Authoremaildisplay"></span>
+        <script>
+            document.getElementById("Authoremaildisplay").innerHTML = localStorage.getItem("Author Email");
+        </script>
+
+    </div>
+    <br>
+    <br>
+
+
+    
+    <div><span id="headinngs">Authorname</span><span id="Authornamedisplay"></span>
+        <script>
+            document.getElementById("Authornamedisplay").innerHTML = localStorage.getItem("Author name");
+        </script>
+
+    </div>
+    <br>
+    <br>
+
+    <div> <span id="headinngs">Publishyear</span><span id="Publishyeardisplay"></span>
+        <script>
+            document.getElementById("Publishyeardisplay").innerHTML = localStorage.getItem("Published  Year");
+        </script>
+
+    </div>
+    <br>
+    <br>
+
+    <div> <span id="headinngs">Price</span><span id="pricedisplay"></span>
+        <script>
+            document.getElementById("pricedisplay").innerHTML = localStorage.getItem("price");
+        </script>
+
+    </div>
+    <br>
+    <br>
+    
+    
+
+
+
+    
+
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <hr>
+        Copyright @2023 - present Syncfusion
+    </footer>
+</body>
+
+</html>
