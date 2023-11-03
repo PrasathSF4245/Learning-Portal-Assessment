@@ -8,22 +8,21 @@ function PriceValidation(){
     var bookprice=price.value;
     if (price.value.trim() == "" || price.value.trim() == null) {
         // alert("Price Feild Cannort be empty");
-        document.getElementById("price").style.border = "solid 2px red";
+        document.getElementById("price").style.border = "solid 4px red";
         invalidprice.innerHTML="Price Feild Cannort be empty";
         form.classList.add("invalid");
         form.classList.remove("valid");
     }
-   
   else  if (regex.test(bookprice) ) {
        // alert("Price Feild should be numbers");
-        document.getElementById("price").style.border = "solid 2px red";
+        document.getElementById("price").style.border = "solid 4px red";
         invalidprice.innerHTML="Price Feild should be numbers";
         form.classList.add("invalid");
         form.classList.remove("valid");
     }
     else  if (bookprice<=0)  {
         // alert("Price Feild should be  valid numbers");
-         document.getElementById("price").style.border = "solid 2px red";
+         document.getElementById("price").style.border = "solid 4px red";
          invalidprice.innerHTML="Price Feild should be valid numbers";
          form.classList.add("invalid");
          form.classList.remove("valid");
@@ -35,7 +34,6 @@ function PriceValidation(){
         invalidprice.innerHTML = "";
         document.getElementById("price").style.border = "solid 2px black";
     }
-
 }
 var checksave=false;
 function Save() {
@@ -89,14 +87,14 @@ function PublishyearValidation() {
     let currentyear = d.getFullYear();
     if (Publishyear.value.trim() == "" || Publishyear.value.trim() == null) {
         
-        document.getElementById("Publishyear").style.border = "solid 2px red";
+        document.getElementById("Publishyear").style.border = "solid 4px red";
         invalidPublishyear.innerHTML="Publish Year Feild Cannort be empty";
         form.classList.add("invalid");
         form.classList.remove("valid");
     }
 
     else if (regex.test(year)) {
-        document.getElementById("Publishyear").style.border = "solid 2px red";
+        document.getElementById("Publishyear").style.border = "solid 4px red";
         invalidPublishyear.innerHTML="Publish Year Feild should be numbers";
         form.classList.add("invalid");
         form.classList.remove("valid");
@@ -104,7 +102,7 @@ function PublishyearValidation() {
 
     else if (year > currentyear) {
       
-        document.getElementById("Publishyear").style.border = "solid 2px red";
+        document.getElementById("Publishyear").style.border = "solid 4px red";
         invalidPublishyear.innerHTML="Please enter valid Published year";
         form.classList.add("invalid");
         form.classList.remove("valid");
@@ -125,21 +123,25 @@ function AuthoremailValidation() {
     var form = document.getElementById("forms");
     var invalidAuthoremail = document.getElementById("invalidAuthoremail");
     var inputText = Authoremail.value;
+    console.log(inputText.includes(".com"));
     let mailformat = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
     if (Authoremail.value.trim() == "" || Authoremail.value.trim() == null) {
         // alert("Author email Feild Cannort be empty");
-        document.getElementById("Authoremail").style.border = "solid 2px red";
+        document.getElementById("Authoremail").style.border = "solid 4px red";
         form.classList.add("invalid");
         form.classList.remove("valid");
         invalidAuthoremail.innerHTML = "Author email Feild cannot be a empty";
     }
 
-    else if (mailformat.test(inputText) == false) {
+    // else if (mailformat.test(inputText)) {
+       else if(!(inputText.includes(".com"))){
+        
         //  alert("Author email is invalid");
-        document.getElementById("Authoremail").style.border = "solid 2px red";
+        document.getElementById("Authoremail").style.border = "solid 4px red";
         form.classList.add("invalid");
         form.classList.remove("valid");
         invalidAuthoremail.innerHTML = "Author email is invalid";
+        
     }
     else {
         form.classList.remove("invalid");
@@ -160,7 +162,7 @@ function AuthornameValidation() {
 
     if (Authorname.value.trim() == "" || Authorname.value.trim() == null) {
         // alert("Author name Feild Cannort be empty");
-        document.getElementById("Authorname").style.border = "solid 2px red";
+        document.getElementById("Authorname").style.border = "solid 4px red";
         form.classList.add("invalid");
         form.classList.remove("valid");
         authornameeorr.innerHTML = "Author Feild cannot be a empty";
@@ -169,7 +171,7 @@ function AuthornameValidation() {
 
     else if (regex.test(lengthofAuthorname) == false) {
         // alert("Author Name Feild Cannort contain numbers");
-        document.getElementById("Authorname").style.border = "solid 2px red";
+        document.getElementById("Authorname").style.border = "solid 4px red";
         form.classList.add("invalid");
         form.classList.remove("valid");
         authornameeorr.innerHTML = "Author Feild cannot be a numbers";
@@ -177,7 +179,7 @@ function AuthornameValidation() {
 
     else if (specialChars.test(lengthofAuthorname)) {
         //  alert("Author Name Feild Cannort contain special characters");
-        document.getElementById("Authorname").style.border = "solid 2px red";
+        document.getElementById("Authorname").style.border = "solid 4px red";
         form.classList.add("invalid");
         form.classList.remove("valid");
         authornameeorr.innerHTML = "Author Feild cannot be a special characters";
@@ -186,7 +188,7 @@ function AuthornameValidation() {
     else if ((lengthofAuthorname).length >= 50) {
 
         //  alert("Book name length should not exceed 50");
-        document.getElementById("Authorname").style.border = "solid 2px red";
+        document.getElementById("Authorname").style.border = "solid 4px red";
         form.classList.add("invalid");
         form.classList.remove("valid");
         authornameeorr.innerHTML = "Author name length should not exceed 50";
@@ -211,17 +213,17 @@ function Booknamevalidation() {
     console.log(typeof (bookName));
 
     if ((bookName.value.trim() == "" || bookName.value.trim() == null)) {
-        form.classList.add("invalid");
-        form.classList.remove("valid");
+        // form.classList.add("invalid");
+        // form.classList.remove("valid");
         booknameeror.innerHTML = "book Name Feild Cannort be empty"
-        document.getElementById("bookname").style.border = "solid 2px red";
+        document.getElementById("bookname").style.border = "solid 4px red";
 
     }
     else if (regex.test(lengthofbookname) == false) {
 
-        form.classList.add("invalid");
-        form.classList.remove("valid");
-        document.getElementById("bookname").style.border = "solid 2px red";
+        // form.classList.add("invalid");
+        // form.classList.remove("valid");
+        document.getElementById("bookname").style.border = "solid 4px red ";
         booknameeror.innerHTML = "book Name Feild should not be numbers"
 
     }
@@ -230,9 +232,9 @@ function Booknamevalidation() {
 
         form.classList.add("invalid");
         form.classList.remove("valid");
-        document.getElementById("bookname").style.border = "solid 2px red";
+        document.getElementById("bookname").style.border = "solid 4px red";
         booknameeror.innerHTML = "book Name Feild should not exced more than 50 characters"
-        document.getElementById("bookname").style.border = "solid 2px red";
+        document.getElementById("bookname").style.border = "solid 4px red";
         return false;
     }
     else {
@@ -241,6 +243,4 @@ function Booknamevalidation() {
         booknameeror.innerHTML = "";
         document.getElementById("bookname").style.border = "solid 2px black";
     }
-
-
 }

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EqwSY6fQlsF9GZh2L3lUpWdHTr05QLm2BY5AHcJA09ccRK2gv8XyOegvCIFnZaAUdf0kwTviqYbNxiI2v50+Fw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PrasathPalani\\OneDrive - Syncfusion\\Desktop\\Final_Assessment\\HospitalApp\\HospitalApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PrasathPalani\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\PrasathPalani\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\PrasathPalani\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\PrasathPalani\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}

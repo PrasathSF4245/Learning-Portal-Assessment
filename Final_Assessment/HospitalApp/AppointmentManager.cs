@@ -52,14 +52,16 @@ namespace HospitalApp
                     if (checkCount <= 1)
                     {
 
-
+                        System.Console.WriteLine();
                         Console.WriteLine($"Doctor Name       : {doctor.Name}");
                         Console.WriteLine($"Doctor Department : {doctor.Department}");
+                        System.Console.WriteLine();
 
                         // To book press “Y”, to cancel press “N”.
                         System.Console.WriteLine("Appointment is confirmed for the date-" + DateTime.Now.ToString("dd/MM/yyyy"));
                         Console.WriteLine("Do you want to Confirm your appoinement YES or N0");
                         string answer = Console.ReadLine().ToLower();
+                        System.Console.WriteLine();
                         while (answer != "yes" && answer != "no")
                         {
                             Console.WriteLine("Invalid ");
@@ -99,9 +101,21 @@ namespace HospitalApp
             {
                 if (currentLoggedinPatient.PatientID == appoinement.PatientID)
                 {
-                    checkEntries = true;
-                    Console.WriteLine($"AppointmentID : {appoinement.AppointmentID}");
-                    Console.WriteLine($"DoctorID      : {appoinement.DoctorID}");
+                    foreach (DoctorDetails doctor in DoctorDetailslist)
+                    {
+                        if (doctor.DoctorID == appoinement.DoctorID)
+                        {
+                            checkEntries = true;
+                            System.Console.WriteLine();
+                            System.Console.WriteLine();
+                            Console.WriteLine($"AppointmentID : {appoinement.AppointmentID}");
+                            Console.WriteLine($"Doctor Name   : {doctor.Name}");
+                            Console.WriteLine($"DoctorID      : {appoinement.DoctorID}");
+                            Console.WriteLine($"Department    : {doctor.Department}");
+                            System.Console.WriteLine();
+                            break;
+                        }
+                    }
                 }
             }
             if (!checkEntries)
