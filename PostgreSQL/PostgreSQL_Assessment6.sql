@@ -1,6 +1,4 @@
 
-
-
 CREATE TABLE EmployeeTable (
 	employeeID int NOT NULL PRIMARY KEY,
     FIRSTNAME VARCHAR(255),
