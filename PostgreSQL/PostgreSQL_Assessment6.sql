@@ -68,7 +68,7 @@ insert into GroupTable(GroupID,Name,CreatedDate,ModifiedDate,IsActive) values(10
 insert into GroupTable(GroupID,Name,CreatedDate,ModifiedDate,IsActive) values(9,'palin desk','2023-03-02','2023-10-10','1');
 
 
-select * from EmployeeTable where FirstName like 'A' order by createddate desc;
+select * from EmployeeTable where FirstName like 'A%' order by createddate desc;
 
 select firstname, email from EmployeeTable where ModifiedDate>'2020-12-02';
 
