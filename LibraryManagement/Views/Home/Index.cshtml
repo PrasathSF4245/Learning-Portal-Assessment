@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BookDetails>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="text-center">Book List</h1>
+        <a asp-action="AddBook" asp-controller="Home" class="btn btn-outline-primary btn-sm">Add Book</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Book Id</th>
+                    <th>Category</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Published</th>
+                    <th>Updated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    if (book.isDeleted == false)
+                    {
+                        <tr>
+                            <td>
+                                <!-- Apply the no-underline class to the link -->
+                                <a asp-action="BookDetails" asp-controller="Home" asp-route-id="@book.BookId" class="no-underline">@book.BookId</a>
+                            </td>
+                            <td>@book.Category</td>
+                            <td>@book.BookName</td>
+                            <td>@book.Author</td>
+                            <td>@book.Price</td>
+                            <td>@book.Published</td>
+                            <td>@book.Updated.ToShortDateString()</td>
+                            <td>
+                                <a asp-action="EditBookDetails" asp-controller="Home" asp-route-id="@book.BookId" class="btn btn-outline-primary btn-sm">Edit</a>
+                                <a asp-action="DeleteBook" asp-controller="Home" asp-route-id="@book.BookId" onclick="return Delete()" class="btn btn-outline-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function Delete() {
+        var userConfirmed = confirm("Do you want to delete the book?");
+
+        if (userConfirmed) {
+          
+            alert("Book deleted successfully");
+            return true; 
+        } else {
+            
+            alert("Deletion canceled");
+           
+            window.location.href = '@Url.Action("Index", "Home")';
+            return false; 
+        }
+    }
+</script>
+

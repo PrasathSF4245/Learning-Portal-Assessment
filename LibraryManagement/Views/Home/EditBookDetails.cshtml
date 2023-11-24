@@ -1,0 +1,59 @@
+﻿@model BookDetails
+<h1 class="mb-4"> Edit Book Details</h1>
+<form asp-controller="Home" asp-action="EditBookDetails" method="post">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input asp-for="BookId" hidden />
+            <label asp-for="BookName" class="form-label"></label>
+            <input asp-for="BookName" class="form-control" />
+            <span asp-validation-for="BookName" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Author" class="form-label"></label>
+            <input asp-for="Author" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label asp-for="Category" class="form-label"></label>
+            <select asp-for="Category" class="form-select" asp-items="Html.GetEnumSelectList<Category>()">
+                <option value="">Select Department</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Price" class="form-label"></label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label asp-for="Published" class="form-label"></label>
+            <select asp-for="Published" class="form-control">
+                <option value="">@Model.Published</option>
+                @for (int year = DateTime.Now.Year; year >= 1900; year--)
+                {
+                    <option value="@year">@year</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Updated" class="form-label"></label>
+            <input asp-for="Updated" class="form-control" type="date" asp-format="{0:yyyy-MM-dd}" />
+        </div>
+
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-secondary" asp-area="" asp-controller="Home" asp-action="Index">Cancel</a>
+        </div>
+    </div>
+</form>

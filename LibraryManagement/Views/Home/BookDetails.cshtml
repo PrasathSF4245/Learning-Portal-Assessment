@@ -1,0 +1,38 @@
+﻿
+@model BookDetails
+@{
+    var id = @Model.BookId;
+}
+<div class="container mt-3">
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold text-primary mb-4">Book Details</h5>
+            <p class="card-text">Category: @Model.Category</p>
+            <p class="card-text">Book Name: @Model.BookName</p>
+            <p class="card-text">Author: @Model.Author</p>
+            <p class="card-text">Price: @Model.Price</p>
+            <p class="card-text">Published: @Model.Published</p>
+            <p class="card-text">Updated: @Model.Updated.ToShortDateString()</p>
+            <a asp-action="EditBookDetails" asp-controller="Home" asp-route-id="@Model.BookId" class="btn btn-outline-primary btn-sm">Edit</a>
+            <a asp-action="DeleteBook" asp-controller="Home" asp-route-id="@Model.BookId"  onclick="return Delete()" class="btn btn-outline-danger btn-sm">Delete</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function Delete() {
+        var userConfirmed = confirm("Do you want to delete the book?");
+
+        if (userConfirmed) {
+
+            alert("Book deleted successfully");
+            return true;
+        } else {
+
+            alert("Deletion canceled");
+
+            window.location.href = '@Url.Action("Index", "Home")';
+            return false;
+        }
+    }
+</script>
