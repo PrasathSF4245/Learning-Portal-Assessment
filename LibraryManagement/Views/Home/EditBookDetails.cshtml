@@ -12,6 +12,7 @@
         <div class="col-md-6">
             <label asp-for="Author" class="form-label"></label>
             <input asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
         </div>
     </div>
 
@@ -21,12 +22,15 @@
             <select asp-for="Category" class="form-select" asp-items="Html.GetEnumSelectList<Category>()">
                 <option value="">Select Department</option>
             </select>
+            <span asp-validation-for="Category" class="text-danger"></span>
         </div>
 
         <div class="col-md-6">
             <label asp-for="Price" class="form-label"></label>
             <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
         </div>
+
     </div>
 
     <div class="row mb-3">
@@ -34,16 +38,28 @@
             <label asp-for="Published" class="form-label"></label>
             <select asp-for="Published" class="form-control">
                 <option value="">@Model.Published</option>
-                @for (int year = DateTime.Now.Year; year >= 1900; year--)
+                @for (int year = DateTime.Now.Year; year >= 1900 && year<=2023; year--)
                 {
                     <option value="@year">@year</option>
                 }
             </select>
+            <span asp-validation-for="Published" class="text-danger"></span>
         </div>
 
+       @*  <div class="col-md-6">
+            <label asp-for="Updated" class="form-label"></label>
+            <input asp-for="Updated" class="form-control" type="date" onchange="validate()" asp-format="{0:yyyy-MM-dd}" />
+            <span asp-validation-for="Updated" id="Updatederror" class="text-danger"></span>
+        </div>
+ *@
+
+
+      
         <div class="col-md-6">
             <label asp-for="Updated" class="form-label"></label>
-            <input asp-for="Updated" class="form-control" type="date" asp-format="{0:yyyy-MM-dd}" />
+            <input asp-for="Updated" class="form-control" type="date" asp-format="{0:yyyy-MM-dd}" id="updatedDate" />
+          
+            <span asp-validation-for="Updated" id="Updatederror" class="text-danger"></span>
         </div>
 
     </div>
@@ -56,4 +72,16 @@
             <a class="btn btn-secondary" asp-area="" asp-controller="Home" asp-action="Index">Cancel</a>
         </div>
     </div>
-</form>
+ </form>
+<script>
+    document.getElementById('updatedDate').addEventListener('change', function () {
+        var selectedDate = new Date(this.value);
+        var today = new Date();
+
+        if (selectedDate > today) {
+          
+            document.getElementById('Updatederror').innerText = "Updated date cannot be in the future.";
+            this.value = ''; // Reset the input value
+        }
+    });
+</script>

@@ -41,7 +41,10 @@
                             <td>@book.Author</td>
                             <td>@book.Price</td>
                             <td>@book.Published</td>
-                            <td>@book.Updated.ToShortDateString()</td>
+
+
+                            <td>@(book.Updated.HasValue ? book.Updated.Value.ToString("yyyy-MM-dd") : "N/A")</td>
+
                             <td>
                                 <a asp-action="EditBookDetails" asp-controller="Home" asp-route-id="@book.BookId" class="btn btn-outline-primary btn-sm">Edit</a>
                                 <a asp-action="DeleteBook" asp-controller="Home" asp-route-id="@book.BookId" onclick="return Delete()" class="btn btn-outline-danger btn-sm">Delete</a>

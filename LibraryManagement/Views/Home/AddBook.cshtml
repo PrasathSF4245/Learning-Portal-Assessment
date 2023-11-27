@@ -43,11 +43,11 @@
             </select>
             <span asp-validation-for="Published" class="text-danger"></span>
         </div>
-
         <div class="col-md-6">
             <label asp-for="Updated" class="form-label"></label>
-            <input asp-for="Updated" class="form-control" type="date" />
-            <span asp-validation-for="Updated" class="text-danger"></span>
+            <input asp-for="Updated" class="form-control" type="date" asp-format="{0:yyyy-MM-dd}" id="updatedDate" />
+
+            <span asp-validation-for="Updated" id="Updatederror" class="text-danger"></span>
         </div>
     </div>
 
@@ -60,3 +60,15 @@
         </div>
     </div>
 </form>
+<script>
+    document.getElementById('updatedDate').addEventListener('change', function () {
+        var selectedDate = new Date(this.value);
+        var today = new Date();
+
+        if (selectedDate > today) {
+
+            document.getElementById('Updatederror').innerText = "Updated date cannot be in the future.";
+            this.value = ''; // Reset the input value
+        }
+    });
+</script>

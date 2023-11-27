@@ -9,8 +9,7 @@ namespace LibraryManagement.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly ILogger<HomeController> _logger;
-
+        
         private readonly IBookRepository _bookRepository;
         private readonly IWebHostEnvironment hostingEnvironment;
 
@@ -49,7 +48,7 @@ namespace LibraryManagement.Controllers
 
                 _bookRepository.AddBook(newBook);
 
-                //return View(_bookRepository.GetBookById(newBook.BookId));
+               
                 return RedirectToAction("BookDetails", new { id = newBook.BookId });
             }
             return View();
@@ -112,8 +111,8 @@ namespace LibraryManagement.Controllers
                 _bookRepository.UpdateBook(book);
                 return RedirectToAction("BookDetails", new { id = book.BookId });
             }
-
-            return RedirectToAction("EditBookDetails", new { id = modifiedBook.BookId } );
+            return View("EditBookDetails", modifiedBook);
+            //// return RedirectToAction("EditBookDetails");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
