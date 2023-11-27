@@ -45,7 +45,6 @@ namespace LibraryManagement.Controllers
                     Updated = book.Updated,
                     Category = book.Category,
                     isDeleted = false
-
                 };
 
                 _bookRepository.AddBook(newBook);
@@ -57,11 +56,17 @@ namespace LibraryManagement.Controllers
         }
         public IActionResult DeleteBook(int id)
         {
-          var book=  _bookRepository.GetBookById(id);
-            if (book.isDeleted==false)
+            BookDetails currentBook = _bookRepository.GetBookById(id);
+            if (currentBook == null || currentBook.isDeleted == true)
+            {
+                Response.StatusCode = 404;
+                return View("BookNotFound", id);
+
+            }
+            if (currentBook.isDeleted==false)
             {
                 
-                _bookRepository.DeleteBook(book);   
+                _bookRepository.DeleteBook(currentBook);   
             }
 
             var Model = _bookRepository.GetAllBooks();
@@ -69,13 +74,27 @@ namespace LibraryManagement.Controllers
         }
         public ViewResult BookDetails(int id)
         {
-            return View(_bookRepository.GetBookById(id));
+            BookDetails currentBook= _bookRepository.GetBookById(id);
+            if (currentBook == null || currentBook.isDeleted == true)
+            {
+                Response.StatusCode = 404;
+                return View("BookNotFound", id);
+
+            }
+            return View(currentBook);
         }
         [HttpGet]
         public ViewResult EditBookDetails(int id)
         {
-           
-            return View(_bookRepository.GetBookById(id));
+            BookDetails currentBook = _bookRepository.GetBookById(id);
+            if (currentBook == null || currentBook.isDeleted == true)
+            {
+                Response.StatusCode = 404;
+                return View("BookNotFound", id);
+
+            }
+
+            return View(currentBook);
         }
         [HttpPost]
         public IActionResult EditBookDetails(BookDetails modifiedBook)
